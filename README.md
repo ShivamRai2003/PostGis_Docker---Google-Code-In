@@ -66,7 +66,7 @@ morphing, reclassifying, and collecting/unioning with the power of SQL .
 
 ``All the above topics clearly shows that PostgreSQL + PostGIS is an important factor in a GIS stack.``
 
-**A Summary of what Docker is and why Docker should be used to containerise PostgreSQL (with PostGIS)**
+### A Summary of what Docker is and why Docker should be used to containerise PostgreSQL (with PostGIS)
 
  ``DOCKER``
  
@@ -90,14 +90,14 @@ Docker is a beast, it can be remotely daunting for incipient users who aren’t 
 
 **Guys you will be thinking that it is like Virtual Machine. But it’s not true. See the difference below.**
 
-/***Virtual Machine 	      				                                               Docker Container
+Virtual Machine 	      				                                               Docker Container
 Hardware-level process isolation 	 		                                   OS level process isolation
 Each VM has a separate OS 				                                          Each container can share OS
 Boots in minutes 				                                                   Boots in seconds
 VMs are of few GBs 					                                                Containers are lightweight (KBs/MBs)
 Ready-made VMs are difficult to find                                    Pre-built docker containers are easily available
 Creating VM takes a relatively longer time 	                            Containers can be created in seconds
-More resource usage 				                                                Less resource usage ***/
+More resource usage 				                                                Less resource usage 
 
 ``Guys See the below architecture between Virtual Machine and Docker``
 
@@ -153,7 +153,7 @@ Status: Downloaded newer image for nginx:latest
 
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/Nginx%20server%20running.JPG)
 
-**Let’s Get familiar with some basic Docker commands**
+### Let’s Get familiar with some basic Docker commands**
 
 `` docker ps `` this command will tell us how many containers are running. At same time. See the output below.
 
@@ -183,14 +183,14 @@ Like we will use the image of postgis so the command will be used here is
 
 ### Creating the container
 
-**Create a volume**
+``Create a volume``
 
 It will persist our data it will be used to persist PostgreSQL database files outside of the the container that runs the database process.
 Command : `` docker volume create pg_data ``
 
 **Creating the Database Container**
 
-**Now we’ll use docker run to create the PostGIS container.
+``Now we’ll use docker run to create the PostGIS container.``
 
 Command : ``docker run --name=postgis -d -e POSTGRES_USER=shivam -e POSTGRES_PASS=password -e POSTGRES_DBNAME=gis -e ALLOW_IP_RANGE=0.0.0.0/0 -p 5432:5432 -v pg_data:/var/lib/postgresql --restart=always kartoza/postgis:9.6-2.4``
 
@@ -200,7 +200,7 @@ Now use ``docker ps`` to see whether the images has been successfully forked fro
 
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/logs-example.JPG)
 
-**Connect to the containerised database using QGIS**
+### Connect to the containerised database using QGIS
 
 You should now be able to add the connection to PostGIS in the browser panel in QGIS. Open QGIS from the start menu. Under Broswer Panel just check postgis  is there. And then right click on it and create a new connection.
 
@@ -212,7 +212,7 @@ Now Enter the database connection parameters you used in the docker run command.
 
 And click ok it will send some messages **Connection Successful**
 
-**Importing the Geometry**
+### Importing the Geometry
 
 We will use the DB Manager plugin to create new database schemas, as well as import and export files from the database. Open the Db Manager.
 
