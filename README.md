@@ -90,9 +90,9 @@ Docker is a beast, it can be remotely daunting for incipient users who aren’t 
 
 **Guys you will be thinking that it is like Virtual Machine. But it’s not true. See the difference below.**
 
-``Virtual Machine - Hardware-level process isolation , Each VM has a separate OS , Boots in minutes 	, VMs are of few GBs , Ready-made VMs are difficult to find, Creating VM takes a relatively longer time , and More resource usage 
+``Virtual Machine - Hardware-level process isolation , Each VM has a separate OS , Boots in minutes 	, VMs are of few GBs , Ready-made VMs are difficult to find, Creating VM takes a relatively longer time , and More resource usage``
 
-Docker - OS level process isolation, Each container can share OS , Boots in seconds, Containers are lightweight (KBs/MBs), Pre-built docker containers are easily avilable, Containers can be created in seconds and Less resource usage``
+``Docker - OS level process isolation, Each container can share OS , Boots in seconds, Containers are lightweight (KBs/MBs), Pre-built docker containers are easily avilable, Containers can be created in seconds and Less resource usage``
 
 **Guys See the below architecture between Virtual Machine and Docker**
 
