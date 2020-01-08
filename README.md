@@ -90,21 +90,16 @@ Docker is a beast, it can be remotely daunting for incipient users who aren’t 
 
 **Guys you will be thinking that it is like Virtual Machine. But it’s not true. See the difference below.**
 
-Virtual Machine 	      				                                               Docker Container
-Hardware-level process isolation 	 		                                   OS level process isolation
-Each VM has a separate OS 				                                          Each container can share OS
-Boots in minutes 				                                                   Boots in seconds
-VMs are of few GBs 					                                                Containers are lightweight (KBs/MBs)
-Ready-made VMs are difficult to find                                    Pre-built docker containers are easily available
-Creating VM takes a relatively longer time 	                            Containers can be created in seconds
-More resource usage 				                                                Less resource usage 
+``Virtual Machine - Hardware-level process isolation , Each VM has a separate OS , Boots in minutes 	, VMs are of few GBs , Ready-made VMs are difficult to find, Creating VM takes a relatively longer time , and More resource usage 
 
-``Guys See the below architecture between Virtual Machine and Docker``
+Docker - OS level process isolation, Each container can share OS , Boots in seconds, Containers are lightweight (KBs/MBs), Pre-built docker containers are easily avilable, Containers can be created in seconds and Less resource usage``
+
+**Guys See the below architecture between Virtual Machine and Docker**
 
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/containers-vs-virtual-machines%204.jpg)
 
 
-**Why Docker should be used to containerise PostgreSQL (with PostGIS)**
+### Why Docker should be used to containerise PostgreSQL (with PostGIS)
 
 •	With containers, you can approach the database as an on-demand utility, which means that each application can have its own dedicated database that can be spun up as needed. This overcomes the disadvantages of large, monolithic databases with a microservices architecture supported by smaller, containerized databases
 .
@@ -137,7 +132,7 @@ Guys, my experience was with docker was amazing I faced a lot of difficulties. B
 
 7.	In the terminal type ``  docker run --name=nginx -d -p 80:80 nginx``  after running the command you will get the following output.
 
-$ docker run --name=nginx -d -p 80:80 nginx
+``$ docker run --name=nginx -d -p 80:80 nginx
 Unable to find image 'nginx:latest' locally
 latest: Pulling from library/nginx
 bc95e04b23c0: Pull complete
@@ -145,7 +140,7 @@ aee0c172e58a: Pull complete
 c2a5d8ccfabc: Pull complete
 Digest: sha256:adea4f68096fded167603ba6663ed615a80e090da68eb3c9e2508c15c8368401
 Status: Downloaded newer image for nginx:latest
-1743234776d03ess65595s95s95s95s95s95s9s59s59s5s95s9s5s9s59ss98ee90f
+1743234776d03ess65595s95s95s95s95s95s9s59s59s5s95s9s5s9s59ss98ee90f``
 
 8.	Now get the docker ip address so we can check in our web browser If docker is actually running. Command : ``docker-machine ip``  or type ``ifconfig``
 
@@ -188,7 +183,7 @@ Like we will use the image of postgis so the command will be used here is
 It will persist our data it will be used to persist PostgreSQL database files outside of the the container that runs the database process.
 Command : `` docker volume create pg_data ``
 
-**Creating the Database Container**
+### Creating the Database Container
 
 ``Now we’ll use docker run to create the PostGIS container.``
 
