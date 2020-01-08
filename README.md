@@ -90,9 +90,9 @@ Docker is a beast, it can be remotely daunting for incipient users who aren’t 
 
 **Guys you will be thinking that it is like Virtual Machine. But it’s not true. See the difference below.**
 
-``Virtual Machine - Hardware-level process isolation , Each VM has a separate OS , Boots in minutes 	, VMs are of few GBs , Ready-made VMs are difficult to find, Creating VM takes a relatively longer time , and More resource usage``
+``Virtual Machine - Hardware-level process isolation , Each VM has a separate OS , Boots in minutes 	, VMs are of few GBs , Ready-made VMs are difficult to find, Creating VM takes a relatively longer time , and More resource usage.``
 
-``Docker - OS level process isolation, Each container can share OS , Boots in seconds, Containers are lightweight (KBs/MBs), Pre-built docker containers are easily avilable, Containers can be created in seconds and Less resource usage``
+``Docker - OS level process isolation, Each container can share OS , Boots in seconds, Containers are lightweight (KBs/MBs), Pre-built docker containers are easily avilable, Containers can be created in seconds and Less resource usage.``
 
 **Guys See the below architecture between Virtual Machine and Docker**
 
@@ -193,7 +193,7 @@ Now use ``docker ps`` to see whether the images has been successfully forked fro
 
 **Note: If you want to see log output from your container you can do so by using ``docker logs`` as an example just see the below image how the output will be there in your docker.**
 
-![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/logs-example.JPG)
+``![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/logs-example.JPG)``
 
 ### Connect to the containerised database using QGIS
 
