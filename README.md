@@ -193,7 +193,7 @@ Now use ``docker ps`` to see whether the images has been successfully forked fro
 
 **Note: If you want to see log output from your container you can do so by using ``docker logs`` as an example just see the below image how the output will be there in your docker.**
 
-``![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/logs-example.JPG)``
+![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/logs-example.JPG)
 
 ### Connect to the containerised database using QGIS
 
