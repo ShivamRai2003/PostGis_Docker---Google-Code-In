@@ -126,9 +126,11 @@ Guys, my experience was with docker was amazing I faced a lot of difficulties. B
 3.	Download the Docker Toolbox installer from here https://github.com/docker/toolbox/releases
 
 4.	See the Image below I have Downloaded the Installer.
+
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/Installer.JPG)
 
 5.	Then I installed Docker Toolbox and it created the image in virtual box and it was running successfully.
+
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/Docker%20running.JPG)
 
 6.	When you installed Docker Toolbox, it will installed and configured a Linux virtual machine on VirtualBox, where your containers will actually run. **Lets test out our installation by running a container running the NGINX web server.** This will not only prove that our container is running, but that we can access it through the network abstrations created by VirtualBox and Docker.
@@ -148,17 +150,21 @@ Status: Downloaded newer image for nginx:latest
 8.	Now get the docker ip address so we can check in our web browser If docker is actually running. Command : ``docker-machine ip``  or type ``ifconfig``
 
 9.	Now in you web browser navigate to this Ip address and you should see the NGINX welcome screen. If yes docker properly installed. 
+
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/Nginx%20server%20running.JPG)
 
 **Let’s Get familiar with some basic Docker commands**
 
 `` docker ps `` this command will tell us how many containers are running. At same time. See the output below.
+
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/docker-ps.JPG)
 
 2.	``docker --version``  this command will tell you the which version of docker you are running.
+
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/docker--version.JPG)
 
 3. ``docker stop`` this command will stop the current container running.
+
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/docker%20stop.JPG)
 
 4. ``docker rm `` will remove the container from docker.
@@ -166,6 +172,7 @@ Status: Downloaded newer image for nginx:latest
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/docker%20rm.JPG)
 
 5.	``docker ps -a`` this command will tell us the status of the container whether it’s running or not.
+
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/docker%20ps-a.JPG)
 
 6.	``docker pull`` this command is used to download the image file from repository of docker.
@@ -190,37 +197,44 @@ Command : ``docker run --name=postgis -d -e POSTGRES_USER=shivam -e POSTGRES_PAS
 Now use ``docker ps`` to see whether the images has been successfully forked from the repository or not.
 
 **Note: If you want to see log output from your container you can do so by using ``docker logs`` as an example just see the below image how the output will be there in your docker.**
+
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/logs-example.JPG)
 
 **Connect to the containerised database using QGIS**
 
 You should now be able to add the connection to PostGIS in the browser panel in QGIS. Open QGIS from the start menu. Under Broswer Panel just check postgis  is there. And then right click on it and create a new connection.
+
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/post-gis.JPG)
 
 Now Enter the database connection parameters you used in the docker run command. The “Host” parameter will the the IP of your Docker VM (you can get it by running docker-machine ip in the terminal window)
+
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/new%20connection.JPG)
 
 And click ok it will send some messages **Connection Successful**
 
 **Importing the Geometry**
 
-We will use the DB Manager plugin to create new database schemas, as well as import and export files from the database. Open the Db Manager
+We will use the DB Manager plugin to create new database schemas, as well as import and export files from the database. Open the Db Manager.
+
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/Db%20Manager.JPG)
 
 As you can see the connection details also. Now locate in which directory your layer file is saved. I will be using my Asia_Russia ShapeFile.
+
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/Asia_Russia.JPG)
 
 Now **Import the layer/file from DB manager** And click on **Update Options** it will automatically will the required fields. And don’t forgot to choose the Schema under output table.
+
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/Importing.JPG)
 
 Now Click On Okay and Under Browser Panel just refresh the Schema (Public, Topology) and you will see that we successfully imported the layer in PostGis.
+
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/Topology.JPG)
 
 Last, Click on that layer and drag it to the Layers Panel. and the data would be visible to workspace area.
 
 ![](https://github.com/ShivamRai2003/PostGis_Docker---Google-Code-In/blob/master/IMAGES/Output.JPG)
 
-                                                                                                           ** Thank You **
+                                          ** Thank You **
  <!-- Source Used -->                                                                                  
  <!-- https://alexurquhart.com/post/set-up-postgis-with-docker/ -->
  <!-- https://gis.stackexchange.com/questions/223487/what-is-the-purpose-of-postgis-on-postgresql/ -->
